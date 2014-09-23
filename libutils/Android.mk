@@ -108,6 +108,7 @@ endif
 
 ifeq ($(TARGET_BOARD_PLATFORM),mt6582)
 LOCAL_CFLAGS += -DMTK_MT6582
+LOCAL_SRC_FILES += MediatekHacks.cpp
 endif
 
 LOCAL_C_INCLUDES += \
