@@ -106,6 +106,10 @@ ifeq ($(TARGET_ARCH),mips)
 LOCAL_CFLAGS += -DALIGN_DOUBLE
 endif
 
+ifeq ($(TARGET_BOARD_PLATFORM),mt6582)
+LOCAL_CFLAGS += -DMTK_MT6582
+endif
+
 LOCAL_C_INCLUDES += \
 		bionic/libc/private \
 		external/zlib
