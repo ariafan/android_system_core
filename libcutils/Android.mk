@@ -114,6 +114,10 @@ LOCAL_SRC_FILES := $(commonSources) \
         trace.c \
         uevent.c
 
+ifeq ($(TARGET_BOARD_PLATFORM),mt6582)
+LOCAL_SRC_FILES += pmem-dev.cpp
+endif # $(TARGET_BOARD_PLATFORM),mt6582
+
 ifeq ($(TARGET_ARCH),arm)
 LOCAL_SRC_FILES += arch-arm/memset32.S
 else  # !arm
